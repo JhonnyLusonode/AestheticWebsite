@@ -1,0 +1,84 @@
+<!--if you read this youre a fan-->
+<!--site by Jhonny. btw-->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <title>Aesthetic.Jhonny$</title>
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="icon" type="icon/ico" href="" />
+  <script src="https://kit.fontawesome.com/54134cb04f.js" crossorigin="anonymous"></script>
+  <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rythm.js/2.2.5/rythm.min.js"></script>
+   <script src="assets/js/teste.js" crossorigin="anonymous"></script>
+      
+</head>
+
+<body>
+ <div id="wrapper">
+    <div id="preload">
+      <p><font color="#ff0000">-----------------------------------</font></p>
+      <p><font color="#ff0000">Welcome,  <font color="#ff0000">click </font><font color="#ff0000">to join in!</font></p>
+      <p><font color="#ff0000">-----------------------------------</font></p>
+    </div>
+    <div id="hidden">
+      <img src='assets/ceu.gif' id='selector'/>
+       <div class="topleft">Made by <a style="color: #ff0000; text-decoration:none" href="" target="blank_" > Jhonny.</a></div>
+        <div id="skynet">
+         <a style="text-decoration:none" href="https://lusonode.com" target="blank_"><font color="#ff0000">Lusonode</font></a>
+       </div>
+      <div id="main">
+        <div class="bass blur1">
+          <h1><font color="#FFFFFF">Welcome</font><font color="#ff0000"> to Aesthetic</font><font color="#ff0000"> $ </font></h1><br>
+        </div>
+      </div>
+      
+      <div id="links" style="text-align:center;">
+          <!--Tempo-->
+            <div id="time">Horas</div>
+            <div id="date">Horas</div>
+            <br>
+         <!---->
+        <ul id="menu">
+          <li><a style="color: #FFFFFF" href="https://steamcommunity.com/" target="blank_">Steam </a></li>
+          <li><font color="#ff0000"> | </li>
+          <li><a style="color: #FFFFFF" href="https://discord.gg/" target="blank_">Discord </a></li>
+        </ul>
+      </div>
+    </div>
+ </div>
+    
+
+  <audio
+    id="music"
+    class="music"
+    src="assets/matue-tempo.mp3"
+    autoplay
+    loop
+    onplaying=""
+    style="display: none"
+  ></audio>
+  <script>
+    document.getElementById("music").pause();
+    document.getElementById("hidden").style = "opacity: 0; transition: 2s;";
+
+    document.addEventListener("mousedown", handleMouseDown);
+
+    function handleMouseDown() {
+      document.getElementById("music").play();
+      document.getElementById("preload").style =
+        "opacity: 0; transition: 0.6s;";
+
+      document.getElementById("hidden").style = "opacity: 1; transition: 2s;";
+
+      var rythm = new Rythm();
+      rythm.addRythm("blur1", "blur", 0, 250);
+      rythm.addRythm("bass", "pulse", 130, 200);
+      rythm.connectExternalAudioElement(document.getElementById("music"));
+      rythm.setGain(0.07);
+      rythm.start();
+      document.getElementById("music").play();
+      document.removeEventListener("mousedown", handleMouseDown);
+    }
+    
+  </script>
+</body>
